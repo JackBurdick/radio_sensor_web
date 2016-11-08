@@ -1,7 +1,11 @@
-var express = require('express'),
+var mongoose   = require('mongoose'),
+    express    = require('express'),
+    config     = require('./config/database'),
     bodyParser = require('body-parser');
 
 
+
+mongoose.connect(config.database); // connect to __________
 
 var app = express();
 
