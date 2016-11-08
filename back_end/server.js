@@ -1,9 +1,8 @@
 /*
+TODO: Add authorization
 TODO: send email if temp goes above/below certain value
 
-
 */
-
 
 
 var mongoose   = require('mongoose'),
@@ -11,7 +10,6 @@ var mongoose   = require('mongoose'),
     config     = require('./config/database'),
     actions    = require('./actions/methods'),
     bodyParser = require('body-parser');
-
 
 
 mongoose.connect(config.database); // connect to __________
@@ -28,8 +26,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 
-
-
 // main landing page
 router.get('/', function(req, res) {
   //res.send("hi");
@@ -39,8 +35,6 @@ router.get('/', function(req, res) {
 router.get('/get_total', actions.get_add_datapoints_from_DB);
 
 router.post('/add_data', actions.add_data);
-
-
 
 
 // remove the powered by express message, because you know.. hackrz

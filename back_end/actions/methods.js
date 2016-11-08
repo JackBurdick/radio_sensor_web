@@ -4,8 +4,6 @@ var mongoose = require('mongoose'),
     config = require('../config/database');
 
 
-
-
 var functions = {
     add_data: function(req, res) {
         Sensor_Data.findOne({'xvalue': req.body.xvalue}, function(err, data){
@@ -33,6 +31,7 @@ var functions = {
             }
         });
     },
+
 
     get_add_datapoints_from_DB: function(req, res) {
         // TODO: Should probably limit the number of dpts to return
