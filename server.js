@@ -1,6 +1,15 @@
+/*
+TODO: send email if temp goes above/below certain value
+
+
+*/
+
+
+
 var mongoose   = require('mongoose'),
     express    = require('express'),
     config     = require('./config/database'),
+    actions    = require('./actions/methods'),
     bodyParser = require('body-parser');
 
 
@@ -27,7 +36,9 @@ router.get('/', function(req, res) {
   res.json({ message: 'It seems you have reached this page by mistake, nothing to see here' });
 });
 
+router.get('/get_total', actions.get_add_datapoints_from_DB);
 
+router.post('/add_data', actions.add_data);
 
 
 
