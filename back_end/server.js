@@ -16,7 +16,7 @@ mongoose.connect(config.database); // connect to __________
 
 var app = express();
 
-var router = express.Router();    //express router
+var router = express.Router();
 
 // Server information
 var port = process.env.PORT || 3000;
@@ -28,7 +28,6 @@ app.use(bodyParser.json());
 
 // main landing page
 router.get('/', function(req, res) {
-  //res.send("hi");
   res.json({ message: 'It seems you have reached this page by mistake, nothing to see here' });
 });
 

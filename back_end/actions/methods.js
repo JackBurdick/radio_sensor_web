@@ -26,7 +26,7 @@ var functions = {
                 });
             }
             else {
-                // interestingly, a datapoint with that same xvalue exists... who are you trying to fool?
+                // a datapoint with that same xvalue exists...
                 res.json({success: false, msg: 'add datapoint failed, username already used.'});
             }
         });
@@ -34,7 +34,7 @@ var functions = {
 
 
     get_add_datapoints_from_DB: function(req, res) {
-        // TODO: Should probably limit the number of dpts to return
+        // TODO: limit the number of dpts to return
         Sensor_Data.find(function(err, datapoints) {
             if (err) {
                 res.send(err);
