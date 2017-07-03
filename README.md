@@ -36,3 +36,5 @@ Environmental data is sensed, transmitted, received, then sent to an online API.
 
 ## Future Direction
 - All progress is currently suspended as I no longer have access to a SAMM4L8 board or peripherals.
+
+NOTE: git doesn't like me trying to rename the receiver directory :,(
